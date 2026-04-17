@@ -122,23 +122,23 @@ By the end of this training you will be able to:
 >
 > Your view is already scoped to the resource groups your team owns, so everything you see here is yours. You don't need to filter by account or team to "find your stuff". It's already your stuff.
 
-### Slide: Narrowing down the policy list
+### Slide: Working by severity
 
 ![Filter panel open showing Severity, Assessability, and Resource status options with Has non-compliant resources selected](images/04c-filter-panel.png)
 
 ### Talk track (continued)
 
-> Click the filter icon on the left of the policy list and you'll get this panel. Three filter groups are useful here.
+> The way to work this list is by severity, highest first. Criticals, then Highs, then Mediums, then Lows. The summary card on the right tells you at a glance how many of each you're dealing with.
 >
-> **Severity.** Narrow to just Critical and High if you want to triage. Leave it empty to see everything.
+> To make the list match that workflow, click the filter icon on the left of the policies and open this panel.
 >
-> **Assessability.** Most of the time you want *Fully assessed* only. Partial and manual assessments tend to be noisy.
+> **Resource status.** Set this to *Has non-compliant resources*. That collapses the list to just the policies that are actually failing. No point looking at the ones where everything's passing.
 >
-> **Resource status.** This is the one to set. Flip it to *Has non-compliant resources* and the list collapses down to just the policies that actually have something failing. That's usually the policies you'll be working through.
+> **Severity.** Tick *Critical* first, and only Critical. Work through everything critical until that list is clear. Then come back, untick Critical, tick *High*, and work through those. Keep going down the ladder.
 >
 > Click **Show results** and the list redraws.
 >
-> Take a minute, find a failing policy that looks relevant, and click into it. That's what we'll look at next.
+> Pick a failing policy and click into it. That's what we'll look at next.
 
 ### Presenter notes
 
