@@ -137,6 +137,14 @@ By the end of this training you will be able to:
 > **Severity.** Tick *Critical* first, and only Critical. Work through everything critical until that list is clear. Then come back, untick Critical, tick *High*, and work through those. Keep going down the ladder.
 >
 > Click **Show results** and the list redraws.
+
+### Slide: Policies grouped by service
+
+![Policy list inside a framework with policies grouped by cloud service, for example a Storage S3 section listing lacework-global-49, lacework-global-50, and lacework-global-73 with non-compliant resource counts](images/04d-policies-in-section.png)
+
+### Talk track (continued)
+
+> Policies are grouped by cloud service (Storage S3, Storage RDS, IAM, Logging, and so on), so once the list is filtered, scroll to the service you care about and you'll see the failing policies for it. Each row shows the policy ID (like `lacework-global-50`), the policy name, how many resources are non-compliant versus compliant, and the severity.
 >
 > Pick a failing policy and click into it. That's what we'll look at next.
 
@@ -151,42 +159,56 @@ By the end of this training you will be able to:
 
 ### Slide: Anatomy of a violation
 
-![Single policy or violation view showing the policy name, severity, affected resources count, and description](images/05a-violation-detail.png)
+![Violation detail for lacework-global-50 Ensure that S3 is configured with Block Public Access enabled, showing 21 total resources (3 non-compliant, 18 compliant), with a Non-compliant resources tab listing three S3 bucket ARNs, region us-east-1, and account 395054243912](images/05a-violation-detail.png)
 
 ### Talk track
 
-> Let's open a violation. I've clicked into one called *Ensure S3 buckets employ encryption-at-rest*. This is a medium-severity finding, and it applies to any bucket in your account where default encryption isn't configured.
+> Let's open a policy. I've clicked into *Ensure that S3 is configured with 'Block Public Access' enabled*. That's policy ID `lacework-global-50`, severity High.
 >
-> The page is laid out in three useful parts.
+> There are two things you need on this page.
 >
-> **At the top** you've got the policy itself: the name, a plain-English description of what the rule is checking, and the severity. This is also where you'll see the policy ID, something like `lacework-global-72`. Note that down. You'll want it if you need to open a ticket or ask a question.
+> **On the right**, the summary card tells you the scale of the problem. Twenty-one S3 buckets were evaluated against this rule. Eighteen pass, three fail. Those three are what you're here to fix.
 >
-> **In the middle** is the remediation guidance. This is the part you actually care about. It'll tell you exactly what to change on the resource, often with the specific AWS Console path, the CLI command, or the Terraform snippet. Read it carefully, because the fix is usually a one-liner but it has to be done in the right place.
+> **At the bottom**, the **Non-compliant** tab lists those three failing resources by ARN, region, and account. That's your punch list. Each resource also has a small link icon that takes you straight out to the AWS Console for that bucket, which is the fastest way to start fixing.
+>
+> But first, you need to know *what* to fix. That's what **View context** is for.
 
-### Slide: The affected resources list
+### Slide: Reading the policy context
 
-![Table of affected resources below the policy, with columns for resource ID, account, region, and tags](images/05b-affected-resources.png)
+![Fortinet documentation page for lacework-global-50 showing Profile Applicability Level 1, a Description explaining Block Public Access bucket and account settings, and a Rationale section](images/05b-policy-docs.png)
 
 ### Talk track (continued)
 
-> **At the bottom** you've got the list of resources that are actually failing this policy. If your filter is set to your account, this is your punch list: every resource you need to fix.
+> Click the **View context** link at the top of the policy page and it opens the Fortinet documentation for this exact policy in a new tab.
 >
-> Click on any resource in the table and you'll get the full resource detail page. You'll see the tags that are set on it, which account and region it lives in, when FortiCNAPP first saw it was non-compliant, and a link straight out to the AWS Console for that resource. Use that link. It's the fastest way to get from "I know what's wrong" to "I'm fixing it."
+> You get three things here.
+>
+> The **Description** explains in plain English what the rule is actually checking. In this case, whether Block Public Access is enabled at the bucket and account level.
+>
+> The **Rationale** tells you *why* the rule matters, which is useful when someone pushes back and asks why they have to change anything.
+>
+> And below that, which is where we're going next, is the **Remediation** section.
 
-### Slide: Your remediation path
+### Slide: Following the remediation
 
-![Remediation guidance panel with numbered steps highlighted](images/05c-remediation-steps.png)
+![Remediation section of the policy documentation with step-by-step instructions for enabling Block Public Access from the AWS Console and from the AWS CLI, including the aws s3api put-public-access-block command](images/05c-remediation-steps.png)
 
 ### Talk track (continued)
 
-> So the full loop is: open the violation, read the remediation steps, click through to the resource in the AWS Console, make the change, and you're done. The next time FortiCNAPP scans, usually within a few hours, the finding will drop off your list and you'll stop getting notifications for it.
+> The Remediation section gives you the fix two ways.
 >
-> You don't need to tell anyone you fixed it. The scan picks it up automatically.
+> **From Console** walks you through it click by click. Log in to AWS, open the S3 console, pick the bucket, edit public access settings, tick Block all public access, save.
+>
+> **From Command Line** gives you the AWS CLI command ready to copy, like `aws s3api put-public-access-block --bucket <name> ...`. If you manage multiple buckets, that's the faster path.
+>
+> Pick whichever suits you, make the change on each non-compliant bucket from the punch list, and you're done.
+>
+> Next scan, usually within a few hours, those three buckets will flip from non-compliant to compliant and drop off your list. You don't need to tell anyone you fixed it. The scan picks it up automatically.
 
 ### Presenter notes
 
 - Re-emphasise "you don't need to tell anyone". This is the self-service story
-- If the UI shows a "First Seen" date, point it out. Service owners ask about this
+- If a viewer's tenant shows a "Last evaluated" or "First seen" date on the violation page, point it out. Service owners ask about that
 
 ---
 
@@ -331,9 +353,10 @@ Capture these against your real FortiCNAPP tenant with a non-sensitive test reso
 | 04a | `04a-compliance-dashboard.png` | Risk Center > Compliance highlighted + Cloud compliance page |
 | 04b | `04b-framework-detail.png` | Drill-down into a single framework with failing controls |
 | 04c | `04c-filter-panel.png` | Filter panel: Severity, Assessability, Resource status |
-| 05a | `05a-violation-detail.png` | Policy/violation detail top half |
-| 05b | `05b-affected-resources.png` | Affected resources table |
-| 05c | `05c-remediation-steps.png` | Remediation guidance panel |
+| 04d | `04d-policies-in-section.png` | Policy list within a framework, grouped by service |
+| 05a | `05a-violation-detail.png` | Policy detail with the non-compliant resources list |
+| 05b | `05b-policy-docs.png` | Fortinet docs for the policy: description and rationale |
+| 05c | `05c-remediation-steps.png` | Remediation section: From Console and From Command Line |
 | 06a | `06a-when-to-except.png` | Text slide (produced in slide tool) |
 | 06b | `06b-exception-button.png` | Violation page with Add Exception button |
 | 06c | `06c-exception-single-resource.png` | Exception dialog scoped to single resource |
