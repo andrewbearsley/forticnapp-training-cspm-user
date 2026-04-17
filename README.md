@@ -1,6 +1,6 @@
-# FortiCNAPP Training for Service Owners: Compliance Self-Service
+# FortiCNAPP Training for Service Owners: Actioning Compliance Alerts
 
-A ~20-minute training video for technical service owners who receive compliance alerts and need to action them in FortiCNAPP.
+A ~12-minute training video for technical service owners who receive compliance alerts and need to action them in FortiCNAPP.
 
 ## Audience
 
@@ -12,15 +12,13 @@ By the end of this training you will be able to:
 
 1. Log in to FortiCNAPP and set your notification preferences
 2. Find the non-compliant resources you own in the Compliance section
-3. Read a violation and follow the remediation instructions
-4. Create an exception for a single resource
-5. Create an exception that covers multiple resources by tag
+3. Read a policy and follow the remediation instructions to fix the resource
 
 ## Format notes (for the video producer, not shown on screen)
 
 - Each section has a **Slide**, an **image** (embedded screenshot, or a broken-image placeholder with alt text if not yet captured), a **Talk track** (spoken verbatim), and **Presenter notes** (commentary, not spoken)
 - Screenshots to be captured from your FortiCNAPP tenant with representative (non-sensitive) data
-- Run time target: 20 minutes. Talk track is ~1,100 words at ~110 wpm, which is about 10 minutes of pure narration. The remaining ten minutes come from visual dwell time: pointing at the screen, letting UI transitions play out, and letting viewers read dialogs and lists before moving on. Don't rush. Let the screen breathe
+- Run time target: ~12 minutes. Talk track is around 850 words at ~110 wpm, which is about 8 minutes of pure narration. The remaining time comes from visual dwell: pointing at the screen, letting UI transitions play out, letting viewers read dialogs and lists. Don't rush, let the screen breathe
 - Keep cursor movements slow and deliberate. The audience is watching the screen, not just listening
 
 ---
@@ -35,7 +33,7 @@ By the end of this training you will be able to:
 
 > Hi, and welcome. This is for anyone who owns a cloud resource (an S3 bucket, a VM, a database, a subscription) and has received a compliance notification email from the Cyber Security team.
 >
-> The email tells you one of your resources isn't meeting a security standard. In the next twenty minutes I'll show you what to do: log in, set your preferences, find the resource, follow the fix, and file an exception if you can't remediate.
+> The email tells you one of your resources isn't meeting a security standard. I'll show you what to do: log in, set your preferences, find the resource, and follow the remediation.
 >
 > Nothing complicated. By the end you'll be self-serving, no ticket needed.
 
@@ -210,97 +208,15 @@ By the end of this training you will be able to:
 
 ---
 
-## Section 6: Exceptions. Exempting a single resource (~3 min)
-
-### Slide: When to use an exception
-
-![Text slide listing valid reasons for an exception: Remediation is a change request, Resource is legacy or scheduled for decommission, Business-approved exception, False positive](images/06a-when-to-except.png)
-
-### Talk track
-
-> Sometimes you can't fix. Legacy system, test account, a documented business sign-off. In those cases, file an exception instead of ignoring the alert.
->
-> An exception tells FortiCNAPP *this is failing and that's expected for now.* The finding drops off your notifications but stays visible as an exception for the security team to audit. That's the point. Tracked, not ignored.
-
-### Slide: Creating the exception
-
-![Violation detail page with the Add Exception button highlighted](images/06b-exception-button.png)
-
-![Exception dialog with the scope set to a single resource ID and fields for reason, justification, and expiry date](images/06c-exception-single-resource.png)
-
-### Talk track (continued)
-
-> From the policy page, click **Add Exception**. A dialog opens. Four fields.
->
-> **Scope.** What the exception covers. For one resource, select **Resource** and paste its ID. Only that resource is exempted.
->
-> **Reason.** Dropdown: false positive, legacy system, risk accepted, and so on. Pick the closest.
->
-> **Justification.** One or two sentences. Auditors read this. Don't write "approved". Write *who* approved it and *when*. Link a change ticket or RITM if you have one.
->
-> **Expiry.** Always set one. Ninety days is a sensible default. Renew if the reason still holds.
->
-> Click **Save**. The finding drops off your list within minutes and appears in the exceptions view for audit.
-
-### Presenter notes
-
-- Hover on the "Justification" field for a beat. This is the part service owners tend to skimp on
-- If the UI uses slightly different labels (e.g. "Expiration" vs "Expiry"), match what's actually on screen
-
----
-
-## Section 7: Exceptions by tag (~3 min)
-
-### Slide: Why tag-based exceptions
-
-![Diagram: one exception rule with a tag selector (for example Environment = sandbox) covering multiple resources](images/07a-tag-scope-diagram.png)
-
-### Talk track
-
-> Single-resource is fine for one-offs. But often what you want is *all my sandbox resources are exempt from this production-only policy*. Twenty individual exceptions for twenty buckets is painful, and you'd miss ones created next week.
->
-> Tag-based exceptions solve that. Scope the exception to a tag. Any resource carrying that tag, now or in the future, is covered.
-
-### Slide: Creating a tag-scoped exception
-
-![Exception dialog with scope set to Tag and a tag key/value pair entered, for example Environment = sandbox](images/07b-exception-tag-scope.png)
-
-### Talk track (continued)
-
-> Back on the policy page, click **Add Exception**. For scope, choose **Tag**.
->
-> Enter key and value. Say `Environment = sandbox`. Add more tags for an AND, like `Environment = sandbox` AND `Owner = my-team`.
->
-> Same reason, justification, expiry fields. Save.
->
-> From now on, any resource with those tags, including new ones, skips this policy. Set it once, it keeps applying.
-
-### Slide: A word on tag hygiene
-
-![Text slide: Your exceptions are only as good as your tags](images/07c-tag-hygiene.png)
-
-### Talk track (continued)
-
-> One caveat. This only works if your resources are actually tagged. Miss the `Environment` tag on half your sandbox buckets and they'll keep firing alerts.
->
-> Tag your resources. Consistent tagging is what makes this scale.
-
-### Presenter notes
-
-- If the real UI supports multiple tag pairs only as OR (not AND), correct the talk track when recording
-- If the UI uses a tag-prefix match or regex, demonstrate that instead of claiming AND
-
----
-
-## Section 8: Wrap-up and where to get help (~2 min)
+## Section 6: Wrap-up and where to get help (~1 min)
 
 ### Slide: Recap
 
-![Five-point recap slide: 1. Log in at your FortiCNAPP console URL. 2. Set your notification email in your profile. 3. Find your resources in Compliance. 4. Follow the remediation guidance. 5. File an exception (with an expiry) when you can't remediate](images/08a-recap.png)
+![Four-point recap slide: 1. Log in at your FortiCNAPP console URL. 2. Set your notification preferences. 3. Find your resources in Compliance. 4. Follow the remediation guidance](images/06a-recap.png)
 
 ### Talk track
 
-> Quick recap. Five things.
+> Quick recap. Four things.
 >
 > One. Log in with your organisation's SSO.
 >
@@ -309,23 +225,21 @@ By the end of this training you will be able to:
 > Three. Go to Compliance. Everything you see is yours to action.
 >
 > Four. Open a policy, click View context, follow the remediation, fix the resource. The next daily scan picks up the fix.
->
-> Five. When you can't remediate, file an exception. Resource or tag scope, real justification, expiry date. That's what keeps us auditable.
 
 ### Slide: Where to go next
 
-![Contacts and links slide: FortiCNAPP console URL, Cyber Security team mailbox, IT Service Desk, FortiCNAPP documentation link](images/08b-contacts.png)
+![Contacts and links slide: FortiCNAPP console URL, Cyber Security team mailbox, IT Service Desk, FortiCNAPP documentation link](images/06b-contacts.png)
 
 Contacts and links (produced with real contacts at record time):
 
 - FortiCNAPP console URL
-- Compliance questions / exception policy: Cyber Security team mailbox
+- Compliance questions: Cyber Security team mailbox
 - Can't log in: IT Service Desk
 - <a href="https://docs.fortinet.com/product/forticnapp" target="_blank">FortiCNAPP documentation</a>
 
 ### Talk track (continued)
 
-> Can't log in: IT. Exception questions: Cyber Security. Going deeper: the FortiCNAPP documentation, linked on the slide.
+> Can't log in: IT. Questions about a specific finding: Cyber Security. Going deeper: the FortiCNAPP documentation, linked on the slide.
 >
 > That's it. Thanks for your time, and thanks for helping keep the environment secure.
 
@@ -353,23 +267,14 @@ Capture these against your real FortiCNAPP tenant with a non-sensitive test reso
 | 05a | `05a-violation-detail.png` | Policy detail with the non-compliant resources list |
 | 05b | `05b-policy-docs.png` | Fortinet docs for the policy: description and rationale |
 | 05c | `05c-remediation-steps.png` | Remediation section: From Console and From Command Line |
-| 06a | `06a-when-to-except.png` | Text slide (produced in slide tool) |
-| 06b | `06b-exception-button.png` | Violation page with Add Exception button |
-| 06c | `06c-exception-single-resource.png` | Exception dialog scoped to single resource |
-| 07a | `07a-tag-scope-diagram.png` | Text/diagram slide |
-| 07b | `07b-exception-tag-scope.png` | Exception dialog scoped to tag |
-| 07c | `07c-tag-hygiene.png` | Text slide |
-| 08a | `08a-recap.png` | Five-point recap slide |
-| 08b | `08b-contacts.png` | Contacts and links slide |
+| 06a | `06a-recap.png` | Four-point recap slide (produced in slide tool) |
+| 06b | `06b-contacts.png` | Contacts and links slide (produced in slide tool) |
 
 ---
 
 ## Pre-recording checklist
 
 - [ ] Test account has at least one non-compliant resource that's safe to show on screen
-- [ ] Notification email feature in profile has been verified. If it's not there in the current build, update Section 3
-- [ ] Exception dialog has been walked through end-to-end to confirm the scope/reason/justification/expiry fields exist as described
-- [ ] Confirm tag-scoped exceptions support AND vs OR vs single tag, and update Section 7 accordingly
 - [ ] Confirm the custom framework name on screen matches what's said on the talk track
 - [ ] Browser zoom set to 110 to 125% for readability in video
 - [ ] Dark-mode vs light-mode decided and consistent across all screenshots
