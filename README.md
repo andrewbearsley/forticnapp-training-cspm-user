@@ -18,7 +18,7 @@ By the end of this training you will be able to:
 
 ## Format notes (for the video producer, not shown on screen)
 
-- Each section has a **Slide**, a **Screenshot placeholder**, a **Talk track** (spoken verbatim), and **Presenter notes** (commentary, not spoken)
+- Each section has a **Slide**, an **image** (embedded screenshot, or a broken-image placeholder with alt text if not yet captured), a **Talk track** (spoken verbatim), and **Presenter notes** (commentary, not spoken)
 - Screenshots to be captured from your FortiCNAPP tenant with representative (non-sensitive) data
 - Run time target: 20 minutes. Talk track totals ~2,600 words at ~130 wpm
 - Keep cursor movements slow and deliberate. The audience is watching the screen, not just listening
@@ -29,7 +29,7 @@ By the end of this training you will be able to:
 
 ### Slide: Title card
 
-**Screenshot placeholder:** `images/01-title-card.png`. FortiCNAPP logo with the title "Actioning Compliance Alerts: A Guide for Service Owners".
+![Title card: FortiCNAPP logo with title Actioning Compliance Alerts — A Guide for Service Owners](images/01-title-card.png)
 
 ### Talk track
 
@@ -50,7 +50,7 @@ By the end of this training you will be able to:
 
 ### Slide: Accessing FortiCNAPP
 
-**Screenshot placeholder:** `images/02-console-landing.png`. The FortiCNAPP dashboard as it appears right after SSO completes. Blur any account names or resource IDs.
+![FortiCNAPP dashboard right after SSO completes, showing alert overview, non-compliant resources, exposed hosts, and the non-compliant resources trend](images/02-console-landing.png)
 
 ### Talk track
 
@@ -58,7 +58,7 @@ By the end of this training you will be able to:
 >
 > You'll sign in with your organisation's single sign-on credentials the same way you sign in to anything else, so I'm not going to walk through that part. If you can't log in, that's a ticket for IT, not something we cover here.
 >
-> Once you're in, this is what you'll see: the main dashboard. Don't worry about the numbers on this screen. They cover the whole environment, and most of it won't be yours. We're going to drill straight down to just your resources in a moment.
+> Once you're in, this is what you'll see: the main dashboard. What you see here depends on your access. Some people see the whole environment, others only see the accounts and resources their team owns. Either way, we're going to drill straight down to just your resources in a moment.
 
 ### Presenter notes
 
@@ -71,7 +71,7 @@ By the end of this training you will be able to:
 
 ### Slide: Finding your profile
 
-**Screenshot placeholder:** `images/03a-profile-page.png`. Full window showing the Settings sub-nav on the left (scrolled so **My settings > My profile** is visible and highlighted) and the My profile page on the right with name, email, preferences, and access sections.
+![My profile page with the Settings sub-nav on the left (My profile highlighted) and the user's name, email, preferences, time zone, and My access on the right](images/03a-profile-page.png)
 
 ### Talk track
 
@@ -83,7 +83,7 @@ By the end of this training you will be able to:
 
 ### Slide: Preferences to change
 
-**Screenshot placeholder:** `images/03b-profile-preferences.png`. Close-up of the **My preferences** toggle group with **Default email notification**, **Onboarding**, and **Receive monthly updates from FortiCNAPP** called out.
+![Close-up of the My preferences toggle group: Dark mode, Default email notification, Onboarding, Receive monthly updates from FortiCNAPP, Always send me updates, and Set time zone automatically](images/03b-profile-preferences.png)
 
 ### Talk track (continued)
 
@@ -113,7 +113,7 @@ By the end of this training you will be able to:
 
 ### Slide: Navigate to Cloud Compliance
 
-**Screenshot placeholder:** `images/04a-compliance-dashboard.png`. Full window showing the left nav with **Risk Center > Compliance** highlighted, and the Cloud compliance page on the right with the summary dashboard (Total accounts, Policies, Resources, Policies with non-compliant resources by severity), filter bar, and the start of the frameworks list.
+![Cloud compliance page with Risk Center > Compliance highlighted in the left nav, summary dashboard showing Total accounts, Policies, Resources and severity breakdown, filter bar, and the start of the frameworks list](images/04a-compliance-dashboard.png)
 
 ### Talk track
 
@@ -125,7 +125,7 @@ By the end of this training you will be able to:
 
 ### Slide: Inside the framework
 
-**Screenshot placeholder:** `images/04c-framework-detail.png`. Framework report showing categories like "Identity and Access Management", "Data Security", with failed control counts and filter bar visible at top.
+![Framework drill-down with summary of policies with non-compliant resources, severity breakdown, and sections like Identity and Access Management listed below](images/04b-framework-detail.png)
 
 ### Talk track (continued)
 
@@ -139,7 +139,7 @@ By the end of this training you will be able to:
 
 ### Slide: Searching for a specific resource
 
-**Screenshot placeholder:** `images/04d-resource-search.png`. Search or filter box with a resource ID partially typed, results narrowing in real time.
+![Search or filter box with a resource ID partially typed and results narrowing in real time](images/04c-resource-search.png)
 
 ### Talk track (continued)
 
@@ -158,7 +158,7 @@ By the end of this training you will be able to:
 
 ### Slide: Anatomy of a violation
 
-**Screenshot placeholder:** `images/05a-violation-detail.png`. Single policy/violation view showing policy name, severity, affected resources count, description.
+![Single policy or violation view showing the policy name, severity, affected resources count, and description](images/05a-violation-detail.png)
 
 ### Talk track
 
@@ -172,7 +172,7 @@ By the end of this training you will be able to:
 
 ### Slide: The affected resources list
 
-**Screenshot placeholder:** `images/05b-affected-resources.png`. Table of affected resources below the policy, with columns for resource ID, account, region, tags.
+![Table of affected resources below the policy, with columns for resource ID, account, region, and tags](images/05b-affected-resources.png)
 
 ### Talk track (continued)
 
@@ -182,7 +182,7 @@ By the end of this training you will be able to:
 
 ### Slide: Your remediation path
 
-**Screenshot placeholder:** `images/05c-remediation-steps.png`. Remediation guidance panel with numbered steps, highlighted.
+![Remediation guidance panel with numbered steps highlighted](images/05c-remediation-steps.png)
 
 ### Talk track (continued)
 
@@ -201,7 +201,7 @@ By the end of this training you will be able to:
 
 ### Slide: When to use an exception
 
-**Screenshot placeholder:** `images/06a-when-to-except.png`. A simple text slide listing valid reasons: "Remediation is a change request", "Resource is legacy / scheduled for decommission", "Business-approved exception", "False positive".
+![Text slide listing valid reasons for an exception: Remediation is a change request, Resource is legacy or scheduled for decommission, Business-approved exception, False positive](images/06a-when-to-except.png)
 
 ### Talk track
 
@@ -211,9 +211,9 @@ By the end of this training you will be able to:
 
 ### Slide: Creating the exception
 
-**Screenshot placeholder:** `images/06b-exception-button.png`. The violation detail page with an **Add Exception** or **Create Exception** button highlighted.
+![Violation detail page with the Add Exception button highlighted](images/06b-exception-button.png)
 
-**Screenshot placeholder:** `images/06c-exception-single-resource.png`. Exception dialog with the resource scope set to a single resource ID, fields visible for reason, justification, and expiry date.
+![Exception dialog with the scope set to a single resource ID and fields for reason, justification, and expiry date](images/06c-exception-single-resource.png)
 
 ### Talk track (continued)
 
@@ -242,7 +242,7 @@ By the end of this training you will be able to:
 
 ### Slide: Why tag-based exceptions
 
-**Screenshot placeholder:** `images/07a-tag-scope-diagram.png`. A simple diagram: one exception rule with a tag selector (e.g. `Environment = sandbox`) covering multiple resources.
+![Diagram: one exception rule with a tag selector (for example Environment = sandbox) covering multiple resources](images/07a-tag-scope-diagram.png)
 
 ### Talk track
 
@@ -252,7 +252,7 @@ By the end of this training you will be able to:
 
 ### Slide: Creating a tag-scoped exception
 
-**Screenshot placeholder:** `images/07b-exception-tag-scope.png`. Exception dialog with scope set to **Tag** and a tag key/value pair entered, e.g. `Environment = sandbox`.
+![Exception dialog with scope set to Tag and a tag key/value pair entered, for example Environment = sandbox](images/07b-exception-tag-scope.png)
 
 ### Talk track (continued)
 
@@ -266,7 +266,7 @@ By the end of this training you will be able to:
 
 ### Slide: A word on tag hygiene
 
-**Screenshot placeholder:** `images/07c-tag-hygiene.png`. Simple text slide: "Your exceptions are only as good as your tags."
+![Text slide: Your exceptions are only as good as your tags](images/07c-tag-hygiene.png)
 
 ### Talk track (continued)
 
@@ -285,12 +285,7 @@ By the end of this training you will be able to:
 
 ### Slide: Recap
 
-**Screenshot placeholder:** `images/08a-recap.png`. Simple five-point text slide:
-1. Log in at your FortiCNAPP console URL
-2. Set your notification email in your profile
-3. Find your resources in **Compliance**
-4. Follow the remediation guidance
-5. File an exception (with an expiry) when you can't remediate
+![Five-point recap slide: 1. Log in at your FortiCNAPP console URL. 2. Set your notification email in your profile. 3. Find your resources in Compliance. 4. Follow the remediation guidance. 5. File an exception (with an expiry) when you can't remediate](images/08a-recap.png)
 
 ### Talk track
 
@@ -308,7 +303,10 @@ By the end of this training you will be able to:
 
 ### Slide: Where to go next
 
-**Screenshot placeholder:** `images/08b-contacts.png`. Simple text slide with contacts and links (produced with real contacts at record time):
+![Contacts and links slide: FortiCNAPP console URL, Cyber Security team mailbox, IT Service Desk, FortiCNAPP documentation link](images/08b-contacts.png)
+
+Contacts and links (produced with real contacts at record time):
+
 - FortiCNAPP console URL
 - Compliance questions / exception policy: Cyber Security team mailbox
 - Can't log in: IT Service Desk
