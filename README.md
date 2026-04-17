@@ -96,12 +96,6 @@ By the end of this training you will be able to:
 >
 > Scroll down and you'll see **My access**, which shows the user group you belong to. If you ever need to know why you can or can't see something, that's what the access team will ask you for.
 
-### Presenter notes
-
-- Pause on the two notification toggles. Most service owners genuinely don't know these exist
-- The "email is read-only, routing is by tags" point is the one most commonly misunderstood. Say it slowly
-- If a viewer's tenant doesn't show My access at all, skip that line at record time
-
 ---
 
 ## Section 4: Finding your non-compliant resources (~4 min)
@@ -132,15 +126,23 @@ By the end of this training you will be able to:
 >
 > **If you got a notification email**, scroll down in the email. Each finding has a direct link that takes you straight to the resource inside FortiCNAPP, pre-filtered. That's always the fastest path. Don't retype the resource ID; just click the link.
 
-### Slide: Searching for a specific resource
+### Slide: Narrowing down the policy list
 
-![Search or filter box with a resource ID partially typed and results narrowing in real time](images/04c-resource-search.png)
+![Filter panel open showing Severity, Assessability, and Resource status options with Has non-compliant resources selected](images/04c-filter-panel.png)
 
 ### Talk track (continued)
 
-> You can also search by resource ID or resource name if you have it. The search box at the top of the page accepts partial matches, so if you only remember part of your bucket name, that's fine.
+> Click the filter icon on the left of the policy list and you'll get this panel. Three filter groups are useful here.
 >
-> Take a minute, find a resource you recognise, and click into it. That's what we'll look at next.
+> **Severity.** Narrow to just Critical and High if you want to triage. Leave it empty to see everything.
+>
+> **Assessability.** Most of the time you want *Fully assessed* only. Partial and manual assessments tend to be noisy.
+>
+> **Resource status.** This is the one to set. Flip it to *Has non-compliant resources* and the list collapses down to just the policies that actually have something failing. That's usually the policies you'll be working through.
+>
+> Click **Show results** and the list redraws.
+>
+> Take a minute, find a failing policy that looks relevant, and click into it. That's what we'll look at next.
 
 ### Presenter notes
 
@@ -332,7 +334,7 @@ Capture these against your real FortiCNAPP tenant with a non-sensitive test reso
 | 03b | `03b-profile-preferences.png` | Close-up of My preferences toggles |
 | 04a | `04a-compliance-dashboard.png` | Risk Center > Compliance highlighted + Cloud compliance page |
 | 04b | `04b-framework-detail.png` | Drill-down into a single framework with failing controls |
-| 04c | `04c-resource-search.png` | Resource search/filter in action |
+| 04c | `04c-filter-panel.png` | Filter panel: Severity, Assessability, Resource status |
 | 05a | `05a-violation-detail.png` | Policy/violation detail top half |
 | 05b | `05b-affected-resources.png` | Affected resources table |
 | 05c | `05c-remediation-steps.png` | Remediation guidance panel |
