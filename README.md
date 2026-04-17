@@ -118,13 +118,11 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Inside, you'll see categories: Identity and Access Management, Data Security, Logging, and so on, each with a count of how many controls are failing. At this point you're looking at every failing control across every account in the organisation, which is not what you want.
+> Inside, you'll see a summary panel on the right and, below it, categories grouped by section: Identity and Access Management, Data Security, Logging, and so on. Each section lists the policies and how many are failing.
 >
-> What you want is just *your* resources. There are two ways to narrow it down, and the one you use depends on what you have.
+> Your view is already scoped to the resource groups your team owns, so everything you see here is yours. You don't need to filter by account or team to "find your stuff". It's already your stuff.
 >
-> **If you know the account ID**, for example your team owns a specific AWS account, use the account filter at the top and paste it in. The report will now only show controls failing in that account.
->
-> **If you got a notification email**, scroll down in the email. Each finding has a direct link that takes you straight to the resource inside FortiCNAPP, pre-filtered. That's always the fastest path. Don't retype the resource ID; just click the link.
+> If you got a notification email, the fastest path is to scroll down in the email and click the link next to the finding. It takes you straight to the policy or resource inside FortiCNAPP. Don't retype anything; just click through.
 
 ### Slide: Narrowing down the policy list
 
@@ -292,7 +290,7 @@ By the end of this training you will be able to:
 >
 > Two. Check your profile and make sure notifications go to the right mailbox.
 >
-> Three. In Compliance, filter to your account or click the link from the email to find your resources.
+> Three. Go to Compliance — your view is already scoped to your team's resources — or click the link from the email to jump straight to the finding.
 >
 > Four. Open a violation, read the remediation, and fix the resource. The next scan picks up the fix automatically, and the emails stop.
 >
