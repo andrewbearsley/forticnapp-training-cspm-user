@@ -20,7 +20,7 @@ By the end of this training you will be able to:
 
 - Each section has a **Slide**, an **image** (embedded screenshot, or a broken-image placeholder with alt text if not yet captured), a **Talk track** (spoken verbatim), and **Presenter notes** (commentary, not spoken)
 - Screenshots to be captured from your FortiCNAPP tenant with representative (non-sensitive) data
-- Run time target: 20 minutes. Talk track totals ~2,600 words at ~130 wpm
+- Run time target: 20 minutes. Talk track is ~1,100 words at ~110 wpm, which is about 10 minutes of pure narration. The remaining ten minutes come from visual dwell time: pointing at the screen, letting UI transitions play out, and letting viewers read dialogs and lists before moving on. Don't rush. Let the screen breathe
 - Keep cursor movements slow and deliberate. The audience is watching the screen, not just listening
 
 ---
@@ -33,11 +33,11 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> Hi, and welcome. This short training is for anyone who owns a cloud resource (an S3 bucket, a VM, a database, a subscription) and has received a compliance notification email from the Cyber Security team.
+> Hi, and welcome. This is for anyone who owns a cloud resource (an S3 bucket, a VM, a database, a subscription) and has received a compliance notification email from the Cyber Security team.
 >
-> These emails tell you that one of your resources isn't meeting an organisational security standard. In the next twenty minutes, I'll show you exactly what to do about it. We'll cover four things: logging in and setting your notification email, finding your resource, following the remediation instructions, and, for the cases where you can't or shouldn't remediate right now, creating an exception.
+> The email tells you one of your resources isn't meeting a security standard. In the next twenty minutes I'll show you what to do: log in, set your preferences, find the resource, follow the fix, and file an exception if you can't remediate.
 >
-> Nothing here is complicated. By the end you'll be able to self-serve, without needing to open a ticket.
+> Nothing complicated. By the end you'll be self-serving, no ticket needed.
 
 ### Presenter notes
 
@@ -54,11 +54,11 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> Let's start by getting into the console. Your organisation's FortiCNAPP URL has been shared with you in the notification email. I'd recommend bookmarking it now.
+> The console URL is in the notification email. Bookmark it.
 >
-> You'll sign in with your organisation's single sign-on credentials the same way you sign in to anything else, so I'm not going to walk through that part. If you can't log in, that's a ticket for IT, not something we cover here.
+> Sign in with your usual single sign-on. If that breaks, it's an IT ticket, not something we cover here.
 >
-> Once you're in, this is what you'll see: the main dashboard. What you see here depends on your access. Some people see the whole environment, others only see the accounts and resources their team owns. Either way, we're going to drill straight down to just your resources in a moment.
+> Once you're in, this is the dashboard. What you see depends on your access. We're going straight to the compliance view.
 
 ### Presenter notes
 
@@ -74,9 +74,9 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> First let's set you up. In the left-hand navigation, scroll to the bottom, click **Settings**, then in the Settings sub-menu go to **My settings > My profile**.
+> Left nav, bottom, click **Settings**, then **My settings > My profile**.
 >
-> You'll see your name and email at the top. Below that is a section called **My preferences**, and this is where most people will want to make a couple of changes.
+> Name and email at the top. Below that, **My preferences**. Most people change a few things here.
 
 ### Slide: Preferences to change
 
@@ -86,15 +86,15 @@ By the end of this training you will be able to:
 
 > Four toggles matter.
 >
-> **Dark mode.** Your call. Turn it on if you prefer dark, leave it off for light. No right answer.
+> **Dark mode.** Your call.
 >
-> **Default email notification.** Most people turn this one off. It controls the generic default notifications FortiCNAPP sends directly to you. The compliance emails you're getting from the Cyber Security team come through a separate pipeline and aren't affected by this toggle, so switching it off cuts noise without losing the emails that matter.
+> **Default email notification.** Turn off. It's generic FortiCNAPP notifications. Your compliance emails come through a separate pipeline and aren't affected.
 >
-> **Onboarding.** Also turn this off. It drives the in-app onboarding prompts that are only useful the first time you log in.
+> **Onboarding.** Turn off. In-app onboarding prompts, only useful the first time.
 >
-> **Receive monthly updates from FortiCNAPP.** This is the vendor's monthly product-news email. Also usually worth turning off unless you want to track new features.
+> **Receive monthly updates from FortiCNAPP.** Turn off. Vendor newsletter.
 >
-> Scroll down and you'll see **My access**, which shows the user group you belong to. If you ever need to know why you can or can't see something, that's what the access team will ask you for.
+> Scroll down, **My access** shows your user group. Useful if you need to ask the access team about permissions.
 
 ---
 
@@ -106,11 +106,11 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> Now let's find your resources. In the left-hand navigation, under **Risk Center**, click **Compliance**, then choose **Cloud** from the fly-out menu.
+> In the left nav, under **Risk Center**, click **Compliance**, then **Cloud**.
 >
-> This is the Cloud Compliance page. Each row here is a framework that your resources are being evaluated against. You'll see standard ones like CIS AWS and ISO 27001, and you'll also see your organisation's custom framework if one has been set up. That's typically the framework your notification email was generated from.
+> Each row is a framework your resources are evaluated against. CIS AWS, ISO 27001, and your organisation's custom framework if one's set up. That's usually the one your email came from.
 >
-> Click on that framework to open it.
+> Click in.
 
 ### Slide: Inside the framework
 
@@ -118,9 +118,9 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Inside, you'll see a summary panel on the right and, below it, categories grouped by section: Identity and Access Management, Data Security, Logging, and so on. Each section lists the policies and how many are failing.
+> Summary panel on the right, sections below: Identity and Access Management, Data Security, Logging, and so on. Each lists policies and how many are failing.
 >
-> Your view is already scoped to the resource groups your team owns, so everything you see here is yours. You don't need to filter by account or team to "find your stuff". It's already your stuff.
+> Your view is scoped to your team, so everything here is yours.
 
 ### Slide: Working by severity
 
@@ -128,15 +128,15 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> The way to work this list is by severity, highest first. Criticals, then Highs, then Mediums, then Lows. The summary card on the right tells you at a glance how many of each you're dealing with.
+> Work the list by severity, highest first. Criticals, Highs, Mediums, Lows. The summary card tells you how many of each.
 >
-> To make the list match that workflow, click the filter icon on the left of the policies and open this panel.
+> Open the filter panel.
 >
-> **Resource status.** Set this to *Has non-compliant resources*. That collapses the list to just the policies that are actually failing. No point looking at the ones where everything's passing.
+> **Resource status.** Set to *Has non-compliant resources*. Collapses the list to just the failing policies.
 >
-> **Severity.** Tick *Critical* first, and only Critical. Work through everything critical until that list is clear. Then come back, untick Critical, tick *High*, and work through those. Keep going down the ladder.
+> **Severity.** Tick *Critical* only. Clear those. Then untick Critical, tick *High*. Repeat down the ladder.
 >
-> Click **Show results** and the list redraws.
+> Click **Show results**.
 
 ### Slide: Policies grouped by service
 
@@ -144,9 +144,9 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Policies are grouped by cloud service (Storage S3, Storage RDS, IAM, Logging, and so on), so once the list is filtered, scroll to the service you care about and you'll see the failing policies for it. Each row shows the policy ID (like `lacework-global-50`), the policy name, how many resources are non-compliant versus compliant, and the severity.
+> Policies are grouped by service: S3, RDS, IAM, and so on. Scroll to the service you care about. Each row shows the policy ID (like `lacework-global-50`), name, non-compliant versus compliant counts, and severity.
 >
-> Pick a failing policy and click into it. That's what we'll look at next.
+> Pick a failing policy, click in.
 
 ### Presenter notes
 
@@ -163,15 +163,15 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> Let's open a policy. I've clicked into *Ensure that S3 is configured with 'Block Public Access' enabled*. That's policy ID `lacework-global-50`, severity High.
+> I've clicked into *Ensure that S3 is configured with 'Block Public Access' enabled*. Policy ID `lacework-global-50`, severity High.
 >
-> There are two things you need on this page.
+> Two things matter here.
 >
-> **On the right**, the summary card tells you the scale of the problem. Twenty-one S3 buckets were evaluated against this rule. Eighteen pass, three fail. Those three are what you're here to fix.
+> **On the right**, the summary. Twenty-one buckets evaluated, eighteen pass, three fail. Those three are your job.
 >
-> **At the bottom**, the **Non-compliant** tab lists those three failing resources by ARN, region, and account. That's your punch list. Each resource also has a small link icon that takes you straight out to the AWS Console for that bucket, which is the fastest way to start fixing.
+> **At the bottom**, the **Non-compliant** tab lists them by ARN, region, and account. Each row has a link icon that jumps straight to the AWS Console.
 >
-> But first, you need to know *what* to fix. That's what **View context** is for.
+> First, know *what* to fix. Click **View context**.
 
 ### Slide: Reading the policy context
 
@@ -179,15 +179,13 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Click the **View context** link at the top of the policy page and it opens the Fortinet documentation for this exact policy in a new tab.
+> **View context** opens the Fortinet documentation for this policy in a new tab. Three things matter here.
 >
-> You get three things here.
+> **Description.** What the rule is checking. Here: whether Block Public Access is enabled at the bucket and account level.
 >
-> The **Description** explains in plain English what the rule is actually checking. In this case, whether Block Public Access is enabled at the bucket and account level.
+> **Rationale.** Why it matters. Useful when someone asks why they have to change anything.
 >
-> The **Rationale** tells you *why* the rule matters, which is useful when someone pushes back and asks why they have to change anything.
->
-> And below that, which is where we're going next, is the **Remediation** section.
+> And below: the **Remediation** section.
 
 ### Slide: Following the remediation
 
@@ -195,15 +193,15 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> The Remediation section gives you the fix two ways.
+> Remediation gives you the fix two ways.
 >
-> **From Console** walks you through it click by click. Log in to AWS, open the S3 console, pick the bucket, edit public access settings, tick Block all public access, save.
+> **From Console.** Click by click: log in to AWS, open the S3 console, pick the bucket, edit public access settings, tick Block all public access, save.
 >
-> **From Command Line** gives you the AWS CLI command ready to copy, like `aws s3api put-public-access-block --bucket <name> ...`. If you manage multiple buckets, that's the faster path.
+> **From Command Line.** Copy the AWS CLI command, like `aws s3api put-public-access-block --bucket <name> ...`. Faster if you've got many buckets.
 >
-> Pick whichever suits you, make the change on each non-compliant bucket from the punch list, and you're done.
+> Pick whichever suits, apply it to each bucket on the punch list.
 >
-> The compliance scan runs once a day, so the next day those three buckets will flip from non-compliant to compliant and drop off your list. You don't need to tell anyone you fixed it. The scan picks it up automatically.
+> The compliance scan runs daily. Next day the fixed buckets drop off your list. You don't need to tell anyone. The scan picks it up automatically.
 
 ### Presenter notes
 
@@ -220,9 +218,9 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> Now, sometimes you can't fix a finding. Maybe it's a legacy system you can't touch without a change request. Maybe it's a test account where the rule genuinely doesn't apply. Maybe there's a documented business reason the security team has already signed off on. In those cases, file an exception instead of ignoring the alert.
+> Sometimes you can't fix. Legacy system, test account, a documented business sign-off. In those cases, file an exception instead of ignoring the alert.
 >
-> An exception tells FortiCNAPP: *yes, this resource is failing this policy, and that's expected for now.* The finding will stop appearing in your notifications, but it'll still be visible in the dashboard as an explicit exception, so the security team can audit it later. That's the difference between an exception and ignoring the email. Exceptions are tracked and reviewable.
+> An exception tells FortiCNAPP *this is failing and that's expected for now.* The finding drops off your notifications but stays visible as an exception for the security team to audit. That's the point. Tracked, not ignored.
 
 ### Slide: Creating the exception
 
@@ -232,19 +230,17 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Let's walk through it. From the policy page (the same one we were just on), click **Add Exception**.
+> From the policy page, click **Add Exception**. A dialog opens. Four fields.
 >
-> A dialog opens. There are four things you need to fill in.
+> **Scope.** What the exception covers. For one resource, select **Resource** and paste its ID. Only that resource is exempted.
 >
-> **Scope.** This is what the exception applies to. For our first use case, we want this exception to cover just one specific resource, so select **Resource** and paste in the resource ID from the affected list. Only that one resource is exempted; everything else still gets evaluated.
+> **Reason.** Dropdown: false positive, legacy system, risk accepted, and so on. Pick the closest.
 >
-> **Reason.** Pick from the dropdown: false positive, legacy system, risk accepted, and so on. Pick the one closest to the truth.
+> **Justification.** One or two sentences. Auditors read this. Don't write "approved". Write *who* approved it and *when*. Link a change ticket or RITM if you have one.
 >
-> **Justification.** Write a sentence or two explaining why. This is the field auditors read. Don't write "approved". Write *who* approved it and *when*. Reference a change ticket or a RITM number if you have one.
+> **Expiry.** Always set one. Ninety days is a sensible default. Renew if the reason still holds.
 >
-> **Expiry.** Always set an expiry. Ninety days is a sensible default. Don't leave exceptions open forever. If the reason is still valid in ninety days, renew it.
->
-> Click **Save**. The finding will disappear from your active list within a few minutes, and it'll appear in the exceptions view for the security team to audit.
+> Click **Save**. The finding drops off your list within minutes and appears in the exceptions view for audit.
 
 ### Presenter notes
 
@@ -261,9 +257,9 @@ By the end of this training you will be able to:
 
 ### Talk track
 
-> The single-resource exception is useful when it's one specific thing. But often what you actually want to say is: *all my sandbox resources are exempt from this production-only policy.* Creating twenty individual exceptions for twenty sandbox buckets would be painful, and you'd miss ones that get created next week.
+> Single-resource is fine for one-offs. But often what you want is *all my sandbox resources are exempt from this production-only policy*. Twenty individual exceptions for twenty buckets is painful, and you'd miss ones created next week.
 >
-> That's where tag-based exceptions come in. Instead of scoping the exception to a resource ID, you scope it to a tag. Any resource, now or in the future, that carries that tag is covered by the same exception.
+> Tag-based exceptions solve that. Scope the exception to a tag. Any resource carrying that tag, now or in the future, is covered.
 
 ### Slide: Creating a tag-scoped exception
 
@@ -271,13 +267,13 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> Back on the policy page, click **Add Exception** again. This time, for scope, choose **Tag** (or **Resource Tag**, depending on the UI wording).
+> Back on the policy page, click **Add Exception**. For scope, choose **Tag**.
 >
-> Enter the tag key and the tag value. Let's say you're exempting everything tagged `Environment = sandbox`. You can add more than one tag if you need an AND condition, for example `Environment = sandbox` AND `Owner = my-team`. That makes the scope as specific as you need.
+> Enter key and value. Say `Environment = sandbox`. Add more tags for an AND, like `Environment = sandbox` AND `Owner = my-team`.
 >
-> Same fields after that: reason, justification, expiry. Save it.
+> Same reason, justification, expiry fields. Save.
 >
-> From that moment on, any resource carrying those tags won't trigger this specific policy, including new resources you spin up tomorrow. You set the rule once and it keeps applying.
+> From now on, any resource with those tags, including new ones, skips this policy. Set it once, it keeps applying.
 
 ### Slide: A word on tag hygiene
 
@@ -285,9 +281,9 @@ By the end of this training you will be able to:
 
 ### Talk track (continued)
 
-> One caveat. Tag-based exceptions only work if your resources are actually tagged. If half your sandbox buckets are missing the `Environment` tag, they'll keep firing the alert and you'll be confused about why your exception isn't working.
+> One caveat. This only works if your resources are actually tagged. Miss the `Environment` tag on half your sandbox buckets and they'll keep firing alerts.
 >
-> So, same message as before: tag your resources. Consistent tagging is what makes all of this scale.
+> Tag your resources. Consistent tagging is what makes this scale.
 
 ### Presenter notes
 
@@ -306,15 +302,15 @@ By the end of this training you will be able to:
 
 > Quick recap. Five things.
 >
-> One. Log in to the FortiCNAPP console with your organisation's single sign-on.
+> One. Log in with your organisation's SSO.
 >
-> Two. Check your profile and make sure notifications go to the right mailbox.
+> Two. Set your profile preferences. Turn off the notifications you don't need.
 >
-> Three. Go to Compliance. Your view is already scoped to your team's resources, so everything you see is yours to action.
+> Three. Go to Compliance. Everything you see is yours to action.
 >
-> Four. Open a violation, read the remediation, and fix the resource. The next scan picks up the fix automatically, and the emails stop.
+> Four. Open a policy, click View context, follow the remediation, fix the resource. The next daily scan picks up the fix.
 >
-> Five. When you genuinely can't remediate, file an exception. Scope it to a resource or a tag, write a real justification, and set an expiry. That's the bit that keeps us auditable.
+> Five. When you can't remediate, file an exception. Resource or tag scope, real justification, expiry date. That's what keeps us auditable.
 
 ### Slide: Where to go next
 
@@ -329,7 +325,7 @@ Contacts and links (produced with real contacts at record time):
 
 ### Talk track (continued)
 
-> If you can't log in, that's IT. If you've got a question about whether an exception is appropriate, that's the Cyber Security team. And if you want to go deeper on any of this, the FortiCNAPP documentation is linked on the last slide.
+> Can't log in: IT. Exception questions: Cyber Security. Going deeper: the FortiCNAPP documentation, linked on the slide.
 >
 > That's it. Thanks for your time, and thanks for helping keep the environment secure.
 
