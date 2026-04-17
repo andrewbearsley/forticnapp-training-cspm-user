@@ -63,7 +63,6 @@ By the end of this training you will be able to:
 ### Presenter notes
 
 - Do NOT record the SSO flow. Just jump-cut from the URL bar to the post-login dashboard
-- If the demo account shows cross-tenant data, mention the tenant picker briefly but don't dwell
 
 ---
 
@@ -77,9 +76,7 @@ By the end of this training you will be able to:
 
 > First let's set you up. In the left-hand navigation, scroll to the bottom, click **Settings**, then in the Settings sub-menu go to **My settings > My profile**.
 >
-> You'll see your name and email at the top. That email is read-only. It comes from your organisation's single sign-on, so you can't change it here. If it's wrong, that's an IT ticket, not a FortiCNAPP change.
->
-> Below that is a section called **My preferences**, and this is where most people will want to make a couple of changes.
+> You'll see your name and email at the top. Below that is a section called **My preferences**, and this is where most people will want to make a couple of changes.
 
 ### Slide: Preferences to change
 
@@ -98,8 +95,6 @@ By the end of this training you will be able to:
 > **Receive monthly updates from FortiCNAPP.** This is the vendor's monthly product-news email. Also usually worth turning off unless you want to track new features.
 >
 > Scroll down and you'll see **My access**, which shows the user group you belong to. If you ever need to know why you can or can't see something, that's what the access team will ask you for.
->
-> One thing worth calling out: there is no field on this page to change which email address compliance notifications go to. Routing is done by the owner tag on your cloud resources, not by anything in your profile. So: tag your resources. That's the single most useful thing you can do to make these emails land in the right inbox.
 
 ### Presenter notes
 
