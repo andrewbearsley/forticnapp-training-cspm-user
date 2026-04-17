@@ -29,7 +29,7 @@ By the end of this training you will be able to:
 
 ### Slide: Title card
 
-![Title card: FortiCNAPP logo with title Actioning Compliance Alerts — A Guide for Service Owners](images/01-title-card.png)
+![Title card: FortiCNAPP logo with title Actioning Compliance Alerts, a guide for service owners](images/01-title-card.png)
 
 ### Talk track
 
@@ -121,8 +121,6 @@ By the end of this training you will be able to:
 > Inside, you'll see a summary panel on the right and, below it, categories grouped by section: Identity and Access Management, Data Security, Logging, and so on. Each section lists the policies and how many are failing.
 >
 > Your view is already scoped to the resource groups your team owns, so everything you see here is yours. You don't need to filter by account or team to "find your stuff". It's already your stuff.
->
-> If you got a notification email, the fastest path is to scroll down in the email and click the link next to the finding. It takes you straight to the policy or resource inside FortiCNAPP. Don't retype anything; just click through.
 
 ### Slide: Narrowing down the policy list
 
@@ -290,7 +288,7 @@ By the end of this training you will be able to:
 >
 > Two. Check your profile and make sure notifications go to the right mailbox.
 >
-> Three. Go to Compliance — your view is already scoped to your team's resources — or click the link from the email to jump straight to the finding.
+> Three. Go to Compliance. Your view is already scoped to your team's resources, so everything you see is yours to action.
 >
 > Four. Open a violation, read the remediation, and fix the resource. The next scan picks up the fix automatically, and the emails stop.
 >
