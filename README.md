@@ -203,7 +203,7 @@ By the end of this training you will be able to:
 >
 > Pick whichever suits you, make the change on each non-compliant bucket from the punch list, and you're done.
 >
-> Next scan, usually within a few hours, those three buckets will flip from non-compliant to compliant and drop off your list. You don't need to tell anyone you fixed it. The scan picks it up automatically.
+> The compliance scan runs once a day, so the next day those three buckets will flip from non-compliant to compliant and drop off your list. You don't need to tell anyone you fixed it. The scan picks it up automatically.
 
 ### Presenter notes
 
