@@ -69,42 +69,57 @@ By the end of this training you will be able to:
 
 ## Section 3: Setting your user preferences (~2 min)
 
-### Slide: Setting your notification email
+### Slide: Finding your profile
 
-**Screenshot placeholder:** `images/03a-profile-menu-open.png`. Top-right avatar menu expanded, with "My Profile" or "Profile" highlighted.
-
-**Screenshot placeholder:** `images/03b-profile-page.png`. The profile/preferences page showing the email field and notification options.
+**Screenshot placeholder:** `images/03a-profile-page.png`. Full window showing the Settings sub-nav on the left (scrolled so **My settings > My profile** is visible and highlighted) and the My profile page on the right with name, email, preferences, and access sections.
 
 ### Talk track
 
-> The first thing I want you to do is check your profile. Click your initials or avatar in the top right, then click **My Profile**.
+> First let's set you up. In the left-hand navigation, scroll to the bottom, click **Settings**, then in the Settings sub-menu go to **My settings > My profile**.
 >
-> On this page you'll see the email address FortiCNAPP has on file for you. By default, this is your work email, the one your SSO is tied to. For most people that's exactly what you want, and you don't need to change anything.
+> You'll see your name and email at the top. That email is read-only. It comes from your organisation's single sign-on, so you can't change it here. If it's wrong, that's an IT ticket, not a FortiCNAPP change.
 >
-> Where this matters is if you'd rather get notifications at a team mailbox, say a shared cloud-ops inbox, instead of your personal inbox. You can update the notification email here, save, and that's where future compliance emails will land.
+> Below that is a section called **My preferences**, and this is where most people will want to make a couple of changes.
+
+### Slide: Preferences to change
+
+**Screenshot placeholder:** `images/03b-profile-preferences.png`. Close-up of the **My preferences** toggle group with **Default email notification**, **Onboarding**, and **Receive monthly updates from FortiCNAPP** called out.
+
+### Talk track (continued)
+
+> Four toggles matter.
 >
-> A quick word on how you got the email in the first place. The Cyber Security team runs a scheduled scan, groups non-compliant resources by their owner tag, and sends each owner a digest. If your resources aren't tagged with an owner, they'll go to a default mailbox and someone will come find you. So: tag your resources. That's the single most useful thing you can do to make these emails land in the right place.
+> **Dark mode.** Your call. Turn it on if you prefer dark, leave it off for light. No right answer.
+>
+> **Default email notification.** Most people turn this one off. It controls the generic default notifications FortiCNAPP sends directly to you. The compliance emails you're getting from the Cyber Security team come through a separate pipeline and aren't affected by this toggle, so switching it off cuts noise without losing the emails that matter.
+>
+> **Onboarding.** Also turn this off. It drives the in-app onboarding prompts that are only useful the first time you log in.
+>
+> **Receive monthly updates from FortiCNAPP.** This is the vendor's monthly product-news email. Also usually worth turning off unless you want to track new features.
+>
+> Scroll down and you'll see **My access**, which shows the user group you belong to. If you ever need to know why you can or can't see something, that's what the access team will ask you for.
+>
+> One thing worth calling out: there is no field on this page to change which email address compliance notifications go to. Routing is done by the owner tag on your cloud resources, not by anything in your profile. So: tag your resources. That's the single most useful thing you can do to make these emails land in the right inbox.
 
 ### Presenter notes
 
-- If the actual UI for notification preferences is minimal, keep this section short. Don't invent features
-- The "tag your resources" line is the main point. Say it slowly
+- Pause on the two notification toggles. Most service owners genuinely don't know these exist
+- The "email is read-only, routing is by tags" point is the one most commonly misunderstood. Say it slowly
+- If a viewer's tenant doesn't show My access at all, skip that line at record time
 
 ---
 
 ## Section 4: Finding your non-compliant resources (~4 min)
 
-### Slide: Navigate to Compliance
+### Slide: Navigate to Cloud Compliance
 
-**Screenshot placeholder:** `images/04a-left-nav-compliance.png`. Left navigation panel with **Posture > Compliance** (or wherever the current build puts it) highlighted.
-
-**Screenshot placeholder:** `images/04b-compliance-dashboard.png`. Compliance overview showing frameworks (e.g. CIS AWS, and your organisation's custom framework) with pass/fail counts.
+**Screenshot placeholder:** `images/04a-compliance-dashboard.png`. Full window showing the left nav with **Risk Center > Compliance** highlighted, and the Cloud compliance page on the right with the summary dashboard (Total accounts, Policies, Resources, Policies with non-compliant resources by severity), filter bar, and the start of the frameworks list.
 
 ### Talk track
 
-> Now let's find your resources. In the left-hand navigation, open **Posture**, then click **Compliance**.
+> Now let's find your resources. In the left-hand navigation, under **Risk Center**, click **Compliance**, then choose **Cloud** from the fly-out menu.
 >
-> This is the compliance overview. Each row here is a framework: a set of rules that resources are evaluated against. You'll see standard ones like CIS for AWS, and you'll also see your organisation's custom framework. That's the internal framework the Cyber Security team maintains, and it's the one your notification email was generated from.
+> This is the Cloud Compliance page. Each row here is a framework that your resources are being evaluated against. You'll see standard ones like CIS AWS and ISO 27001, and you'll also see your organisation's custom framework if one has been set up. That's typically the framework your notification email was generated from.
 >
 > Click on that framework to open it.
 
@@ -320,12 +335,11 @@ Capture these against your real FortiCNAPP tenant with a non-sensitive test reso
 |---|---|---|
 | 01 | `01-title-card.png` | Title card (produced in slide tool, not captured) |
 | 02 | `02-console-landing.png` | Post-SSO dashboard landing page |
-| 03a | `03a-profile-menu-open.png` | Top-right profile menu expanded |
-| 03b | `03b-profile-page.png` | Profile/preferences page with email field |
-| 04a | `04a-left-nav-compliance.png` | Left nav with Compliance highlighted |
-| 04b | `04b-compliance-dashboard.png` | Compliance overview with frameworks |
-| 04c | `04c-framework-detail.png` | Custom framework drill-down |
-| 04d | `04d-resource-search.png` | Resource search/filter in action |
+| 03a | `03a-profile-page.png` | Settings sub-nav (My profile highlighted) + profile page |
+| 03b | `03b-profile-preferences.png` | Close-up of My preferences toggles |
+| 04a | `04a-compliance-dashboard.png` | Risk Center > Compliance highlighted + Cloud compliance page |
+| 04b | `04b-framework-detail.png` | Drill-down into a single framework with failing controls |
+| 04c | `04c-resource-search.png` | Resource search/filter in action |
 | 05a | `05a-violation-detail.png` | Policy/violation detail top half |
 | 05b | `05b-affected-resources.png` | Affected resources table |
 | 05c | `05c-remediation-steps.png` | Remediation guidance panel |
