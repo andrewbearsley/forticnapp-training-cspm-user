@@ -20,6 +20,7 @@ By the end of this training you will be able to:
 - Screenshots to be captured from your FortiCNAPP tenant with representative (non-sensitive) data
 - Run time target: ~12 minutes. Talk track is around 850 words at ~110 wpm, which is about 8 minutes of pure narration. The remaining time comes from visual dwell: pointing at the screen, letting UI transitions play out, letting viewers read dialogs and lists. Don't rush, let the screen breathe
 - Keep cursor movements slow and deliberate. The audience is watching the screen, not just listening
+- **Light mode throughout.** All screenshots and recordings use FortiCNAPP in light mode for visual consistency. Make sure *Dark mode* is OFF in your profile before capturing anything
 
 ---
 
@@ -277,4 +278,4 @@ Capture these against your real FortiCNAPP tenant with a non-sensitive test reso
 - [ ] Test account has at least one non-compliant resource that's safe to show on screen
 - [ ] Confirm the custom framework name on screen matches what's said on the talk track
 - [ ] Browser zoom set to 110 to 125% for readability in video
-- [ ] Dark-mode vs light-mode decided and consistent across all screenshots
+- [ ] *Dark mode* toggle is OFF in My profile, confirmed before the first capture
